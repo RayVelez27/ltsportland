@@ -63,7 +63,7 @@ const Faqs = () => {
                                         <div className="heading6">How long does it take to receive my order?</div>
                                         <Icon.CaretRight size={24} />
                                     </div>
-                                    <div className="content body1 text-secondary">Production time varies by product and customization complexity. Standard orders typically take 7-14 business days for production, plus shipping time. Rush orders are available for an additional fee. We'll provide an exact timeline when you request a quote.</div>
+                                    <div className="content body1 text-secondary">Production time varies by product and customization complexity. Standard orders typically take 7-14 business days for production, plus shipping time. Rush orders are available for an additional fee. We&apos;ll provide an exact timeline when you request a quote.</div>
                                 </div>
                                 <div
                                     className={`question-item px-7 py-5 rounded-[20px] overflow-hidden border border-line cursor-pointer ${activeQuestion === '3' ? 'open' : ''}`}
