@@ -46,78 +46,84 @@ const Collection = () => {
                         className='h-full'
                     >
                         <SwiperSlide>
-                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleTypeClick('swimwear')}>
-                                <div className="bg-img">
-                                    <Image
-                                        src={'/images/collection/swimwear.png'}
+                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer">
+                                <div className="bg-img" style={{ height: '480px' }}>
+                                    <img
+                                        src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=1000&h=960&fit=crop"
                                         width={1000}
-                                        height={600}
+                                        height={960}
                                         alt='branded apparel'
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
                                 </div>
                                 <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">Branded Apparel</div>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleTypeClick('top')}>
-                                <div className="bg-img">
-                                    <Image
-                                        src={'/images/collection/top.png'}
+                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer">
+                                <div className="bg-img" style={{ height: '480px' }}>
+                                    <img
+                                        src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=1000&h=960&fit=crop"
                                         width={1000}
-                                        height={600}
+                                        height={960}
                                         alt='drinkware'
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
                                 </div>
                                 <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">Drinkware</div>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleTypeClick('sets')}>
-                                <div className="bg-img">
-                                    <Image
-                                        src={'/images/collection/sets.png'}
+                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer">
+                                <div className="bg-img" style={{ height: '480px' }}>
+                                    <img
+                                        src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?w=1000&h=960&fit=crop"
                                         width={1000}
-                                        height={600}
+                                        height={960}
                                         alt='tech accessories'
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
                                 </div>
                                 <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">Tech Accessories</div>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleTypeClick('outerwear')}>
-                                <div className="bg-img">
-                                    <Image
-                                        src={'/images/collection/outerwear.png'}
+                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer">
+                                <div className="bg-img" style={{ height: '480px' }}>
+                                    <img
+                                        src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=1000&h=960&fit=crop"
                                         width={1000}
-                                        height={600}
+                                        height={960}
                                         alt='bags and totes'
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
                                 </div>
                                 <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">Bags & Totes</div>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleTypeClick('underwear')}>
-                                <div className="bg-img">
+                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer">
+                                <div className="bg-img" style={{ height: '480px' }}>
                                     <Image
-                                        src={'/images/collection/underwear.png'}
+                                        src="/images/brand/promo-4.jpg"
                                         width={1000}
-                                        height={600}
-                                        alt='office supplies'
+                                        height={960}
+                                        alt='promotional office supplies'
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
                                 </div>
                                 <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">Office Supplies</div>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer" onClick={() => handleTypeClick('t-shirt')}>
-                                <div className="bg-img">
-                                    <Image
-                                        src={'/images/collection/t-shirt.png'}
+                            <div className="collection-item block relative rounded-2xl overflow-hidden cursor-pointer">
+                                <div className="bg-img" style={{ height: '480px' }}>
+                                    <img
+                                        src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=1000&h=960&fit=crop"
                                         width={1000}
-                                        height={600}
+                                        height={960}
                                         alt='custom apparel'
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                                     />
                                 </div>
                                 <div className="collection-name heading5 text-center sm:bottom-8 bottom-4 lg:w-[200px] md:w-[160px] w-[100px] md:py-3 py-1.5 bg-white rounded-xl duration-500">Custom Apparel</div>

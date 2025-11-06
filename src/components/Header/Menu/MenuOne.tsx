@@ -37,6 +37,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
 
     const [fixedHeader, setFixedHeader] = useState(false)
     const [lastScrollPosition, setLastScrollPosition] = useState(0);
+    const [openMobileServices, setOpenMobileServices] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -71,12 +72,12 @@ const MenuOne: React.FC<Props> = ({ props }) => {
         <>
             <div className={`header-menu style-one ${fixedHeader ? 'fixed' : 'absolute'} top-0 left-0 right-0 w-full md:h-[74px] h-[56px] bg-white`}>
                 <div className="container mx-auto h-full">
-                    <div className="header-main flex justify-between h-full">
+                    <div className="header-main flex items-center justify-between h-full">
                         <div className="menu-mobile-icon lg:hidden flex items-center" onClick={handleMenuMobile}>
                             <i className="icon-category text-2xl"></i>
                         </div>
-                        <div className="left flex items-center gap-16">
-                            <Link href={'/'} className='flex items-center max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2'>
+                        <div className="logo-container flex items-center max-lg:absolute max-lg:left-1/2 max-lg:-translate-x-1/2">
+                            <Link href={'/'} className='flex items-center'>
                                 <Image
                                     src='/images/brand/logo.png'
                                     width={150}
@@ -86,7 +87,9 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                     priority
                                 />
                             </Link>
-                            <div className="menu-main h-full max-lg:hidden">
+                        </div>
+                        <div className="nav-container flex-1 flex justify-center max-lg:hidden">
+                            <div className="menu-main h-full">
                                 <ul className='flex items-center gap-8 h-full'>
                                     <li className='h-full relative'>
                                         <Link
@@ -804,222 +807,77 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                             </div>
                                         </div>
                                     </li>
-                                    <li className='h-full'>
-                                        <Link
-                                            href="/shop/breadcrumb1"
-                                            className={`text-button-uppercase duration-300 h-full flex items-center justify-center ${pathname.includes('/product/') || pathname.includes('/shop/') ? 'active' : ''}`}
-                                        >
-                                            Products
+                                    <li className='h-full relative'>
+                                        <Link href="#!" className={`text-button-uppercase duration-300 h-full flex items-center justify-center ${pathname.includes('/use-cases') ? 'active' : ''}`}>
+                                            Use Cases
                                         </Link>
-                                        <div className="mega-menu absolute top-[74px] left-0 bg-white w-screen" style={{display: 'none'}}>
-                                            <div className="container">
-                                                <div className="nav-link w-full flex justify-between py-8">
-                                                    <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-2">Products Features</div>
-                                                        <ul>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/default'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/product/default' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Defaults
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/sale'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/product/sale' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Sale
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/countdown-timer'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/product/countdown-timer' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Countdown Timer
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/grouped'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/product/grouped' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Grouped
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/bought-together'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/product/bought-together' ? 'active' : ''}`}
-                                                                >
-                                                                    Frequently Bought Together
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/out-of-stock'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/product/out-of-stock' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Out Of Stock
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/variable'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/product/variable' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Variable
-                                                                </Link>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-2">Products Features</div>
-                                                        <ul>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/external'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/product/external' ? 'active' : ''}`}
-                                                                >
-                                                                    Products External
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/on-sale'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/product/on-sale' ? 'active' : ''}`}
-                                                                >
-                                                                    Products On Sale
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/discount'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/product/discount' ? 'active' : ''}`}
-                                                                >
-                                                                    Products With Discount
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/sidebar'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/product/sidebar' ? 'active' : ''}`}
-                                                                >
-                                                                    Products With Sidebar
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/fixed-price'}
-                                                                    className={`link text-secondary duration-300 ${pathname === '/product/fixed-price' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Fixed Price
-                                                                </Link>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-2">Products Layout</div>
-                                                        <ul>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/thumbnail-left'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/thumbnail-left' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Thumbnails Left
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/thumbnail-bottom'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/thumbnail-bottom' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Thumbnails Bottom
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/one-scrolling'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/one-scrolling' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Grid 1 Scrolling
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/two-scrolling'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/two-scrolling' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Grid 2 Scrolling
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/combined-one'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/combined-one' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Combined 1
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/combined-two'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/combined-two' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Combined 2
-                                                                </Link>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div className="nav-item">
-                                                        <div className="text-button-uppercase pb-2">Products Styles</div>
-                                                        <ul>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/styles/style1'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/styles/style1' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Style 01
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/styles/style2'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/styles/style2' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Style 02
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/styles/style3'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/styles/style3' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Style 03
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/styles/style4'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/styles/style4' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Style 04
-                                                                </Link>
-                                                            </li>
-                                                            <li>
-                                                                <Link
-                                                                    href={'/product/styles/style5'}
-                                                                    className={`link text-secondary duration-300 cursor-pointer ${pathname === '/product/styles/style5' ? 'active' : ''}`}
-                                                                >
-                                                                    Products Style 05
-                                                                </Link>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
+                                            <ul className='w-full'>
+                                                <li>
+                                                    <Link href="/use-cases/employee-appreciation" className={`link text-secondary duration-300 ${pathname === '/use-cases/employee-appreciation' ? 'active' : ''}`}>
+                                                        Employee Appreciation Gifts
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/use-cases/trade-shows" className={`link text-secondary duration-300 ${pathname === '/use-cases/trade-shows' ? 'active' : ''}`}>
+                                                        Trade Show Giveaways
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/use-cases/new-hire-kits" className={`link text-secondary duration-300 ${pathname === '/use-cases/new-hire-kits' ? 'active' : ''}`}>
+                                                        New Hire Kits
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/use-cases/client-appreciation" className={`link text-secondary duration-300 ${pathname === '/use-cases/client-appreciation' ? 'active' : ''}`}>
+                                                        Client Appreciation Gifts
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/use-cases/fundraising" className={`link text-secondary duration-300 ${pathname === '/use-cases/fundraising' ? 'active' : ''}`}>
+                                                        Fundraising Merchandise
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/use-cases/seasonal-promotions" className={`link text-secondary duration-300 ${pathname === '/use-cases/seasonal-promotions' ? 'active' : ''}`}>
+                                                        Seasonal Promotions (Holiday, Summer, etc.)
+                                                    </Link>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li className='h-full relative'>
+                                        <Link href="#!" className={`text-button-uppercase duration-300 h-full flex items-center justify-center ${pathname.includes('/services') ? 'active' : ''}`}>
+                                            Services
+                                        </Link>
+                                        <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
+                                            <ul className='w-full'>
+                                                <li>
+                                                    <Link href="/services/screen-printing" className={`link text-secondary duration-300 ${pathname === '/services/screen-printing' ? 'active' : ''}`}>
+                                                        Screen Printing
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/services/embroidery" className={`link text-secondary duration-300 ${pathname === '/services/embroidery' ? 'active' : ''}`}>
+                                                        Embroidery
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/services/sublimation" className={`link text-secondary duration-300 ${pathname === '/services/sublimation' ? 'active' : ''}`}>
+                                                        Sublimation
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/services/dtf" className={`link text-secondary duration-300 ${pathname === '/services/dtf' ? 'active' : ''}`}>
+                                                        DTF
+                                                    </Link>
+                                                </li>
+                                                <li>
+                                                    <Link href="/services/promotional-products" className={`link text-secondary duration-300 ${pathname === '/services/promotional-products' ? 'active' : ''}`}>
+                                                        Promotional Products
+                                                    </Link>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </li>
                                     <li className='h-full relative' style={{display: 'none'}}>
@@ -1071,43 +929,19 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                             Contact Us
                                         </Link>
                                     </li>
-                                    <li className='h-full relative'>
-                                        <Link href="#!" className={`text-button-uppercase duration-300 h-full flex items-center justify-center`}>
-                                            Services
-                                        </Link>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="right flex gap-12">
-                            <div className="max-md:hidden search-icon flex items-center cursor-pointer relative">
-                                <Icon.MagnifyingGlass size={24} color='black' onClick={openModalSearch} />
-                                <div className="line absolute bg-line w-px h-6 -right-6"></div>
-                            </div>
-                            <div className="list-action flex items-center gap-4">
-                                <div className="user-icon flex items-center justify-center cursor-pointer">
-                                    <Icon.User size={24} color='black' onClick={handleLoginPopup} />
-                                    <div
-                                        className={`login-popup absolute top-[74px] w-[320px] p-7 rounded-xl bg-white box-shadow-sm 
-                                            ${openLoginPopup ? 'open' : ''}`}
-                                    >
-                                        <Link href={'/login'} className="button-main w-full text-center">Login</Link>
-                                        <div className="text-secondary text-center mt-3 pb-4">Don’t have an account?
-                                            <Link href={'/register'} className='text-black pl-1 hover:underline'>Register</Link>
-                                        </div>
-                                        <Link href={'/my-account'} className="button-main bg-white text-black border border-black w-full text-center">Dashboard</Link>
-                                        <div className="bottom mt-4 pt-4 border-t border-line"></div>
-                                        <Link href={'#!'} className='body1 hover:underline'>Support</Link>
-                                    </div>
-                                </div>
-                                <div className="max-md:hidden wishlist-icon flex items-center cursor-pointer" onClick={openModalWishlist}>
-                                    <Icon.Heart size={24} color='black' />
-                                </div>
-                                <div className="cart-icon flex items-center relative cursor-pointer" onClick={openModalCart}>
-                                    <Icon.Handbag size={24} color='black' />
-                                    <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-black w-4 h-4 flex items-center justify-center rounded-full">{cartState.cartArray.length}</span>
-                                </div>
-                            </div>
+                        <div className="button-container flex items-center max-lg:hidden">
+                            <Link
+                                href="/pages/contact"
+                                className="px-6 py-2.5 text-white font-semibold rounded-md transition-colors duration-300 whitespace-nowrap"
+                                style={{ backgroundColor: '#081839' }}
+                                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#0a1f4d'}
+                                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#081839'}
+                            >
+                                Request a Quote
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -1134,15 +968,124 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                     />
                                 </Link>
                             </div>
-                            <div className="form-search relative mt-2">
-                                <Icon.MagnifyingGlass size={20} className='absolute left-3 top-1/2 -translate-y-1/2 cursor-pointer' />
-                                <input type="text" placeholder='What are you looking for?' className=' h-12 rounded-lg border border-line text-sm w-full pl-10 pr-4' />
-                            </div>
                             <div className="list-nav mt-6">
                                 <ul>
                                     <li>
                                         <Link href="/" className='text-xl font-semibold flex items-center justify-between'>
                                             Home
+                                        </Link>
+                                    </li>
+                                    <li
+                                        className={`${openSubNavMobile === 2 ? 'open' : ''}`}
+                                        onClick={() => handleOpenSubNavMobile(2)}
+                                    >
+                                        <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>
+                                            Use Cases
+                                            <span className='text-right'>
+                                                <Icon.CaretRight size={20} />
+                                            </span>
+                                        </a>
+                                        <div className="sub-nav-mobile">
+                                            <div
+                                                className="back-btn flex items-center gap-3"
+                                                onClick={() => handleOpenSubNavMobile(2)}
+                                            >
+                                                <Icon.CaretLeft />
+                                                Back
+                                            </div>
+                                            <div className="list-nav-item w-full pt-3 pb-12">
+                                                <ul>
+                                                    <li>
+                                                        <Link href="/use-cases/employee-appreciation" className='link text-secondary duration-300'>
+                                                            Employee Appreciation
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/use-cases/trade-shows" className='link text-secondary duration-300'>
+                                                            Trade Shows & Events
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/use-cases/new-hire-kits" className='link text-secondary duration-300'>
+                                                            New Hire Kits
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/use-cases/client-appreciation" className='link text-secondary duration-300'>
+                                                            Client Appreciation
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/use-cases/fundraising" className='link text-secondary duration-300'>
+                                                            Fundraising
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/use-cases/seasonal-promotions" className='link text-secondary duration-300'>
+                                                            Seasonal Promotions
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li
+                                        className={`${openSubNavMobile === 3 ? 'open' : ''}`}
+                                        onClick={() => handleOpenSubNavMobile(3)}
+                                    >
+                                        <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>
+                                            Services
+                                            <span className='text-right'>
+                                                <Icon.CaretRight size={20} />
+                                            </span>
+                                        </a>
+                                        <div className="sub-nav-mobile">
+                                            <div
+                                                className="back-btn flex items-center gap-3"
+                                                onClick={() => handleOpenSubNavMobile(3)}
+                                            >
+                                                <Icon.CaretLeft />
+                                                Back
+                                            </div>
+                                            <div className="list-nav-item w-full pt-3 pb-12">
+                                                <ul>
+                                                    <li>
+                                                        <Link href="/services/screen-printing" className='link text-secondary duration-300'>
+                                                            Screen Printing
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/services/embroidery" className='link text-secondary duration-300'>
+                                                            Embroidery
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/services/sublimation" className='link text-secondary duration-300'>
+                                                            Sublimation
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/services/dtf" className='link text-secondary duration-300'>
+                                                            DTF
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/services/promotional-products" className='link text-secondary duration-300'>
+                                                            Promotional Products
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <Link href="/pages/about" className='text-xl font-semibold flex items-center justify-between mt-5'>
+                                            About
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link href="/pages/contact" className='text-xl font-semibold flex items-center justify-between mt-5'>
+                                            Contact
                                         </Link>
                                     </li>
                                     <li style={{display: 'none'}}
@@ -2177,20 +2120,58 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                         <Icon.House weight='bold' className='text-2xl' />
                         <span className="menu_bar-title caption2 font-semibold">Home</span>
                     </Link>
-                    <Link href={'/shop/filter-canvas'} className='menu_bar-link flex flex-col items-center gap-1'>
-                        <Icon.List weight='bold' className='text-2xl' />
-                        <span className="menu_bar-title caption2 font-semibold">Category</span>
+                    <Link href={'/pages/about'} className='menu_bar-link flex flex-col items-center gap-1'>
+                        <Icon.Info weight='bold' className='text-2xl' />
+                        <span className="menu_bar-title caption2 font-semibold">About</span>
                     </Link>
-                    <Link href={'/search-result'} className='menu_bar-link flex flex-col items-center gap-1'>
-                        <Icon.MagnifyingGlass weight='bold' className='text-2xl' />
-                        <span className="menu_bar-title caption2 font-semibold">Search</span>
-                    </Link>
-                    <Link href={'/cart'} className='menu_bar-link flex flex-col items-center gap-1'>
-                        <div className="icon relative">
-                            <Icon.Handbag weight='bold' className='text-2xl' />
-                            <span className="quantity cart-quantity absolute -right-1.5 -top-1.5 text-xs text-white bg-black w-4 h-4 flex items-center justify-center rounded-full">{cartState.cartArray.length}</span>
-                        </div>
-                        <span className="menu_bar-title caption2 font-semibold">Cart</span>
+                    <div className='menu_bar-link flex flex-col items-center gap-1 relative'>
+                        <button onClick={() => setOpenMobileServices(!openMobileServices)} className='flex flex-col items-center gap-1'>
+                            <Icon.Briefcase weight='bold' className='text-2xl' />
+                            <span className="menu_bar-title caption2 font-semibold">Services</span>
+                        </button>
+                        {openMobileServices && (
+                            <div className="absolute bottom-full left-0 right-0 bg-white shadow-lg rounded-t-xl mb-2 py-2 px-4">
+                                <Link
+                                    href="/services/screen-printing"
+                                    className="block py-2 text-sm hover:text-orange-500"
+                                    onClick={() => setOpenMobileServices(false)}
+                                >
+                                    Screen Printing
+                                </Link>
+                                <Link
+                                    href="/services/embroidery"
+                                    className="block py-2 text-sm hover:text-orange-500"
+                                    onClick={() => setOpenMobileServices(false)}
+                                >
+                                    Embroidery
+                                </Link>
+                                <Link
+                                    href="/services/sublimation"
+                                    className="block py-2 text-sm hover:text-orange-500"
+                                    onClick={() => setOpenMobileServices(false)}
+                                >
+                                    Sublimation
+                                </Link>
+                                <Link
+                                    href="/services/dtf"
+                                    className="block py-2 text-sm hover:text-orange-500"
+                                    onClick={() => setOpenMobileServices(false)}
+                                >
+                                    DTF
+                                </Link>
+                                <Link
+                                    href="/services/promotional-products"
+                                    className="block py-2 text-sm hover:text-orange-500"
+                                    onClick={() => setOpenMobileServices(false)}
+                                >
+                                    Promotional Products
+                                </Link>
+                            </div>
+                        )}
+                    </div>
+                    <Link href={'/pages/contact'} className='menu_bar-link flex flex-col items-center gap-1'>
+                        <Icon.Envelope weight='bold' className='text-2xl' />
+                        <span className="menu_bar-title caption2 font-semibold">Contact</span>
                     </Link>
                 </div>
             </div>

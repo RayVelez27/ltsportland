@@ -111,7 +111,7 @@
 
         >a.active::before,
         >.link.active::before {
-            width: 100%;
+            width: 0;
         }
 
         &.logo a::before,
@@ -151,7 +151,7 @@
             color: var(--black);
 
             &::before {
-                width: 100%;
+                width: 0;
             }
         }
     }
@@ -202,7 +202,7 @@
 
             >a::before,
             >.link::before {
-                width: 100%;
+                width: 0;
             }
         }
     }

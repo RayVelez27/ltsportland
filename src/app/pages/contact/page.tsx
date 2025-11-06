@@ -29,6 +29,9 @@ const ContactUs = () => {
                                     <div className="email">
                                         <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="email" type="email" placeholder="Your Email *" required />
                                     </div>
+                                    <div className="phone sm:col-span-2">
+                                        <input className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="phone" type="tel" placeholder="Phone Number *" required />
+                                    </div>
                                     <div className="message sm:col-span-2">
                                         <textarea className="border-line px-4 pt-3 pb-3 w-full rounded-lg" id="message" rows={3} placeholder="Your Message *" required />
                                     </div>
