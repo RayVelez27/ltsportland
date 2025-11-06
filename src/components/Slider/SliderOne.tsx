@@ -28,7 +28,7 @@ const SliderOne = () => {
                             <div className="text-content max-w-2xl p-[20px] text-center md:text-left mt-16 md:mt-12">
                                 <div className="text-sub-display text-white">Your Logo, Our Maine Craft</div>
                                 <div className="text-display md:mt-5 mt-2 text-white">Premium Promotional Products for Your Business</div>
-                                <Link href='/shop/breadcrumb-img' className="button-main md:mt-8 mt-3 inline-block" style={{backgroundColor: '#FF6B35'}}>Browse Products</Link>
+                                <Link href='/pages/contact' className="button-main md:mt-8 mt-3 inline-block" style={{backgroundColor: '#FF6B35'}}>Let's Make It Happen</Link>
                             </div>
                         </div>
                     </div>
