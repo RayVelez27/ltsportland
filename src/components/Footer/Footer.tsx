@@ -28,32 +28,7 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="right-content flex flex-wrap gap-y-8 basis-3/4 max-lg:basis-full">
-                                <div className="list-nav flex justify-between basis-2/3 max-md:basis-full gap-4">
-                                    <div className="item flex flex-col basis-1/3 ">
-                                        <div className="text-button-uppercase pb-3">Infomation</div>
-                                        <Link className='caption1 has-line-before duration-300 w-fit' href={'/pages/contact'}>Contact us</Link>
-                                        <Link className='caption1 has-line-before duration-300 w-fit pt-2' href={'#!'}>Career</Link>
-                                        <Link className='caption1 has-line-before duration-300 w-fit pt-2' href={'/my-account'}>My Account</Link>
-                                        <Link className='caption1 has-line-before duration-300 w-fit pt-2' href={'/order-tracking'}>Order  & Returns</Link>
-                                        <Link className='caption1 has-line-before duration-300 w-fit pt-2' href={'/pages/faqs'}>FAQs</Link>
-                                    </div>
-                                    <div className="item flex flex-col basis-1/3 ">
-                                        <div className="text-button-uppercase pb-3">Product Categories</div>
-                                        <Link className='caption1 has-line-before duration-300 w-fit' href={'/shop/breadcrumb1'}>Branded Apparel</Link>
-                                        <Link className='caption1 has-line-before duration-300 w-fit pt-2' href={'/shop/breadcrumb1'}>Drinkware</Link>
-                                        <Link className='caption1 has-line-before duration-300 w-fit pt-2' href={'/shop/breadcrumb1'}>Bags & Totes</Link>
-                                        <Link className='caption1 has-line-before duration-300 w-fit pt-2' href={'/shop/breadcrumb1'}>Tech Accessories</Link>
-                                        <Link className='caption1 has-line-before duration-300 w-fit pt-2' href={'/shop/breadcrumb1'}>Office Supplies</Link>
-                                    </div>
-                                    <div className="item flex flex-col basis-1/3 ">
-                                        <div className="text-button-uppercase pb-3">Customer Services</div>
-                                        <Link className='caption1 has-line-before duration-300 w-fit' href={'/pages/faqs'}>Orders FAQs</Link>
-                                        <Link className='caption1 has-line-before duration-300 w-fit pt-2' href={'/pages/faqs'}>Shipping</Link>
-                                        <Link className='caption1 has-line-before duration-300 w-fit pt-2' href={'/pages/faqs'}>Privacy Policy</Link>
-                                        <Link className='caption1 has-line-before duration-300 w-fit pt-2' href={'/order-tracking'}>Return & Refund</Link>
-                                    </div>
-                                </div>
-                                <div className="newsletter basis-1/3 pl-7 max-md:basis-full max-md:pl-0">
+                                <div className="newsletter basis-full pl-0">
                                     <div className="text-button-uppercase">Newsletter</div>
                                     <div className="caption1 mt-3">Get bulk pricing updates and exclusive promotional product offers</div>
                                     <div className="input-block w-full h-[52px] mt-4">

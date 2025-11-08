@@ -262,17 +262,11 @@ export default function Home() {
       </motion.section>
 
       {/* How We Work Section */}
-      <motion.section
-        className="how-we-work md:py-20 py-10"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-      >
+      <section className="how-we-work md:py-20 py-10" style={{paddingLeft: 0, paddingRight: 0}}>
         <style jsx>{`
           .steps-container {
             width: 100%;
-            max-width: 80rem;
+            max-width: 36.5rem;
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -361,7 +355,7 @@ export default function Home() {
           }
 
           .steps-number {
-            font-size: clamp(5rem, 1vw, 6.25rem);
+            font-size: clamp(5rem, 10vw, 6.25rem);
             font-weight: 900;
             line-height: 1.2em;
             color: #ff6a3e;
@@ -386,6 +380,10 @@ export default function Home() {
           }
 
           @media only screen and (min-width: 48rem) {
+            .steps-container {
+              max-width: 120rem;
+            }
+
             .steps-card-group {
               grid-template-columns: repeat(4, 1fr);
               gap: 0;
@@ -445,12 +443,12 @@ export default function Home() {
               <span className="steps-number">04</span>
               <h3 className="steps-h3">Delivery & Delight</h3>
               <p className="steps-item-text">
-                Receive your perfectly branded products on time and ready to impress. We handle logistics so you can focus on making an impact.
+                Your custom promotional products are delivered on time and ready to impress. We ensure everything arrives exactly as promised.
               </p>
             </li>
           </ul>
         </div>
-      </motion.section>
+      </section>
 
       {/* Top Selling Products Section */}
       <motion.div
