@@ -809,7 +809,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                     </li>
                                     <li className='h-full relative'>
                                         <Link href="#!" className={`text-button-uppercase duration-300 h-full flex items-center justify-center ${pathname.includes('/use-cases') ? 'active' : ''}`}>
-                                            Use Cases
+                                            How We Help
                                         </Link>
                                         <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
                                             <ul className='w-full'>
@@ -848,7 +848,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                     </li>
                                     <li className='h-full relative'>
                                         <Link href="#!" className={`text-button-uppercase duration-300 h-full flex items-center justify-center ${pathname.includes('/services') ? 'active' : ''}`}>
-                                            Services
+                                            Our Services
                                         </Link>
                                         <div className="sub-menu py-3 px-5 -left-10 absolute bg-white rounded-b-xl">
                                             <ul className='w-full'>
@@ -916,7 +916,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                     </li>
                                     <li className='h-full relative'>
                                         <Link href="/pages/about" className={`text-button-uppercase duration-300 h-full flex items-center justify-center ${pathname === '/pages/about' ? 'active' : ''}`}>
-                                            About Us
+                                            Our Story
                                         </Link>
                                     </li>
                                     <li className='h-full relative'>
@@ -980,7 +980,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         onClick={() => handleOpenSubNavMobile(2)}
                                     >
                                         <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>
-                                            Use Cases
+                                            How We Help
                                             <span className='text-right'>
                                                 <Icon.CaretRight size={20} />
                                             </span>
@@ -1034,7 +1034,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                         onClick={() => handleOpenSubNavMobile(3)}
                                     >
                                         <a href={'#!'} className='text-xl font-semibold flex items-center justify-between mt-5'>
-                                            Services
+                                            Our Services
                                             <span className='text-right'>
                                                 <Icon.CaretRight size={20} />
                                             </span>
@@ -1080,7 +1080,7 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                                     </li>
                                     <li>
                                         <Link href="/pages/about" className='text-xl font-semibold flex items-center justify-between mt-5'>
-                                            About
+                                            Our Story
                                         </Link>
                                     </li>
                                     <li>
@@ -1103,12 +1103,12 @@ const MenuOne: React.FC<Props> = ({ props }) => {
                     </Link>
                     <Link href={'/pages/about'} className='menu_bar-link flex flex-col items-center gap-1'>
                         <Icon.Info weight='bold' className='text-2xl' />
-                        <span className="menu_bar-title caption2 font-semibold">About</span>
+                        <span className="menu_bar-title caption2 font-semibold">Our Story</span>
                     </Link>
                     <div className='menu_bar-link flex flex-col items-center gap-1 relative'>
                         <button onClick={() => setOpenMobileServices(!openMobileServices)} className='flex flex-col items-center gap-1'>
                             <Icon.Briefcase weight='bold' className='text-2xl' />
-                            <span className="menu_bar-title caption2 font-semibold">Services</span>
+                            <span className="menu_bar-title caption2 font-semibold">Our Services</span>
                         </button>
                         {openMobileServices && (
                             <div className="absolute bottom-full left-0 right-0 bg-white shadow-lg rounded-t-xl mb-2 py-2 px-4">
