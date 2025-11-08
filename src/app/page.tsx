@@ -149,51 +149,20 @@ export default function Home() {
           }
 
           .why-choose-image-group {
-            font-size: min(2.3vw, 0.75em);
-            width: 39.5em;
-            height: 51.25em;
+            width: 100%;
+            max-width: 40rem;
             position: relative;
             z-index: 1;
-            transform: scaleX(-1);
-          }
-
-          .why-choose-picture {
-            width: 19.125em;
-            height: 22.5em;
-            overflow: hidden;
-            display: block;
-            position: absolute;
             border-radius: 1rem;
+            overflow: hidden;
           }
 
-          .why-choose-picture img {
+          .why-choose-gif {
             width: 100%;
-            height: 100%;
+            height: auto;
+            display: block;
+            border-radius: 1rem;
             object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: scaleX(-1);
-          }
-
-          .why-choose-picture1 {
-            top: 5em;
-            left: 0;
-          }
-
-          .why-choose-picture2 {
-            top: 0;
-            right: 0;
-          }
-
-          .why-choose-picture3 {
-            bottom: 0;
-            left: 0;
-          }
-
-          .why-choose-picture4 {
-            bottom: 5em;
-            right: 0;
           }
 
           @media only screen and (min-width: 64rem) {
@@ -203,7 +172,6 @@ export default function Home() {
             }
 
             .why-choose-image-group {
-              font-size: min(1.2vw, 1em);
               flex: none;
               order: 2;
             }
@@ -212,38 +180,11 @@ export default function Home() {
 
         <div className="why-choose-container">
           <div className="why-choose-image-group">
-            <picture className="why-choose-picture why-choose-picture1">
-              <Image
-                src="/images/brand/promo-4.jpg"
-                width={306}
-                height={360}
-                alt="Promotional products showcase"
-              />
-            </picture>
-            <picture className="why-choose-picture why-choose-picture2">
-              <Image
-                src="/images/brand/Best-Company-Swag-Ideas_Hero.webp"
-                width={306}
-                height={360}
-                alt="Company swag ideas"
-              />
-            </picture>
-            <picture className="why-choose-picture why-choose-picture3">
-              <Image
-                src="/images/brand/Customer-Appreciation-Gifts_Hero.webp"
-                width={306}
-                height={360}
-                alt="Customer appreciation gifts"
-              />
-            </picture>
-            <picture className="why-choose-picture why-choose-picture4">
-              <Image
-                src="/images/brand/promo-collage-center3-1024x543.webp"
-                width={306}
-                height={360}
-                alt="Promotional products collage"
-              />
-            </picture>
+            <img
+              src="/images/brand/Story_-Classic-05-[remix].gif"
+              alt="LTS Inc promotional products showcase"
+              className="why-choose-gif"
+            />
           </div>
 
           <div className="why-choose-content">
