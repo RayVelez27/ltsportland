@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import TopNavOne from '@/components/Header/TopNav/TopNavOne'
 import MenuOne from '@/components/Header/Menu/MenuOne'
 import SliderOne from '@/components/Slider/SliderOne'
@@ -20,10 +21,23 @@ export default function Home() {
         <MenuOne props="bg-white" />
         <SliderOne />
       </div>
-      <Collection />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <Collection />
+      </motion.div>
 
       {/* Why Choose Us Section */}
-      <section className="why-choose-us md:py-20 py-10">
+      <motion.section
+        className="why-choose-us md:py-20 py-10"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         <style jsx>{`
           .why-choose-container {
             width: 100%;
@@ -245,10 +259,16 @@ export default function Home() {
             <a className="why-choose-button" href="/pages/contact">Request a Quote</a>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Top Selling Products Section */}
-      <div className="top-selling-products md:pt-20 pt-10">
+      <motion.div
+        className="top-selling-products md:pt-20 pt-10"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
         <div className="container">
           <div className="heading3 text-center">Top Selling Products</div>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 gap-8 md:mt-10 mt-6">
@@ -390,11 +410,32 @@ export default function Home() {
 
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <Banner />
-      <Benefit props="md:py-20 py-10" />
-      <Testimonial data={testimonialData} limit={6} />
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <Banner />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <Benefit props="md:py-20 py-10" />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+        <Testimonial data={testimonialData} limit={6} />
+      </motion.div>
       <Footer />
     </>
   )
