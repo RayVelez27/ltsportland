@@ -261,6 +261,197 @@ export default function Home() {
         </div>
       </motion.section>
 
+      {/* How We Work Section */}
+      <motion.section
+        className="how-we-work md:py-20 py-10"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+      >
+        <style jsx>{`
+          .steps-container {
+            width: 100%;
+            max-width: 80rem;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(3rem, 6vw, 4rem);
+          }
+
+          .steps-content {
+            text-align: center;
+            width: 100%;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .steps-topper {
+            font-size: 1rem;
+            line-height: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            color: #ff6a3e;
+            margin-bottom: 0.5rem;
+            display: block;
+          }
+
+          .steps-title {
+            font-size: clamp(1.9375rem, 3.9vw, 3.0625rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            max-width: 43.75rem;
+            margin: 0 0 1rem 0;
+            color: #1a1a1a;
+          }
+
+          .steps-text {
+            font-size: clamp(1rem, 1.5vw, 1.125rem);
+            line-height: 1.6em;
+            margin: 0;
+            color: #767676;
+            max-width: 32.625rem;
+          }
+
+          .steps-card-group {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            justify-items: center;
+            align-items: stretch;
+            grid-auto-flow: row;
+            width: 100%;
+          }
+
+          .steps-item {
+            list-style: none;
+            box-sizing: border-box;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+          }
+
+          .steps-item::after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
+            opacity: 0.6;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+
+          .steps-item:first-of-type {
+            padding-top: 0;
+          }
+
+          .steps-item:last-of-type {
+            padding-bottom: 0;
+          }
+
+          .steps-item:last-of-type::after {
+            content: none;
+          }
+
+          .steps-number {
+            font-size: clamp(5rem, 1vw, 6.25rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            color: #ff6a3e;
+            opacity: 0.12;
+            display: block;
+          }
+
+          .steps-h3 {
+            font-size: clamp(1.25rem, 2vw, 1.5625rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            margin: -1.9375rem 0 1rem 0;
+            color: #1a1a1a;
+          }
+
+          .steps-item-text {
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            line-height: 1.5em;
+            text-align: left;
+            margin: 0;
+            color: #767676;
+          }
+
+          @media only screen and (min-width: 48rem) {
+            .steps-card-group {
+              grid-template-columns: repeat(4, 1fr);
+              gap: 0;
+            }
+
+            .steps-item {
+              padding: clamp(1.5rem, 3vw, 3.75rem);
+            }
+
+            .steps-item::after {
+              width: 1px;
+              height: 100%;
+              background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
+              opacity: 0.6;
+              right: 0;
+              left: initial;
+            }
+
+            .steps-item:first-of-type,
+            .steps-item:last-of-type {
+              padding: clamp(1.5rem, 3vw, 3.75rem);
+            }
+          }
+        `}</style>
+
+        <div className="steps-container">
+          <div className="steps-content">
+            <span className="steps-topper">Our Process</span>
+            <h2 className="steps-title">How We Work</h2>
+            <p className="steps-text">
+              From concept to delivery, we make ordering promotional products simple and stress-free. Our proven process ensures quality results every time.
+            </p>
+          </div>
+          <ul className="steps-card-group">
+            <li className="steps-item">
+              <span className="steps-number">01</span>
+              <h3 className="steps-h3">Share Your Vision</h3>
+              <p className="steps-item-text">
+                Tell us about your project, budget, and timeline. We&apos;ll help you find the perfect products to match your brand and goals.
+              </p>
+            </li>
+            <li className="steps-item">
+              <span className="steps-number">02</span>
+              <h3 className="steps-h3">Review & Approve Design</h3>
+              <p className="steps-item-text">
+                Our design team creates custom mockups for your approval. We&apos;ll refine until it&apos;s exactly what you envisioned.
+              </p>
+            </li>
+            <li className="steps-item">
+              <span className="steps-number">03</span>
+              <h3 className="steps-h3">Production & Quality Check</h3>
+              <p className="steps-item-text">
+                Your order goes into production with our trusted suppliers. Every item is inspected to meet our high-quality standards.
+              </p>
+            </li>
+            <li className="steps-item">
+              <span className="steps-number">04</span>
+              <h3 className="steps-h3">Delivery & Delight</h3>
+              <p className="steps-item-text">
+                Receive your perfectly branded products on time and ready to impress. We handle logistics so you can focus on making an impact.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </motion.section>
+
       {/* Top Selling Products Section */}
       <motion.div
         className="top-selling-products md:pt-20 pt-10"
