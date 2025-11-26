@@ -126,20 +126,11 @@ export default function Home() {
 
             .why-choose-image-group {
               flex: none;
-              order: 2;
             }
           }
         `}</style>
 
         <div className="why-choose-container">
-          <div className="why-choose-image-group">
-            <img
-              src="/images/brand/Story_-Classic-05-[remix].gif"
-              alt="LTS Inc promotional products showcase"
-              className="why-choose-gif"
-            />
-          </div>
-
           <div className="why-choose-content">
             <h2 className="why-choose-title">More Than Promotional Products. <span className="why-choose-color">A Maine Legacy.</span></h2>
             <p className="why-choose-text">
@@ -153,6 +144,14 @@ export default function Home() {
             </p>
 
             <a className="why-choose-button" href="/pages/contact">Request a Quote</a>
+          </div>
+
+          <div className="why-choose-image-group">
+            <img
+              src="/images/brand/Story_-Classic-05-[remix].gif"
+              alt="LTS Inc promotional products showcase"
+              className="why-choose-gif"
+            />
           </div>
         </div>
       </motion.section>

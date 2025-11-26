@@ -7,7 +7,7 @@ import Link from 'next/link'
 const SliderOne = () => {
     return (
         <>
-            <div className="slider-block style-one xl:h-[688px] lg:h-[640px] md:h-[464px] sm:h-[400px] h-[280px] max-[420px]:h-[256px] w-full relative rounded-b-[100px] overflow-hidden">
+            <div className="slider-block style-one xl:h-[688px] lg:h-[640px] md:h-[464px] sm:h-[400px] h-[450px] max-[420px]:h-[380px] w-full relative rounded-b-[100px] overflow-hidden">
                 <div className="slider-main h-full w-full relative">
                     <div className="slider-item h-full w-full relative">
                         {/* Full-width background video */}
